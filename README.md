@@ -33,51 +33,51 @@ e.g: [(geneA,geneB),(geneC,geneD)]
 # Parameter list:
 
 ##   For get_p
-train_matrix: dataframe. should be set like colname=genename; rowname=sample_name.
+train_matrix: dataframe. Should be set like colname=genename; rowname=sample_name.
 
 label: array like. Can be DataFrame Series or array like.
 
-train_dir_list: list default False. if you just want to input the datadir, please input like:     ["data/case_matrix.txt","data/ctrl_matrix.txt"].note that, all the data in the list should be the same order as train_matrix.
+train_dir_list: list default False. If you just want to input the datadir, please input like:     ["data/case_matrix.txt","data/ctrl_matrix.txt"].note that, all the data in the list should be the same order as train_matrix.
 
 hint_list: list default False.This argument is set to be campatibel with the data you save in the "data/", eg. if your set list as ["data/case_matrix.txt","data/ctrl_matrix.txt"]. Then, your hint list should be [1,0], where 1 represent case, 0 represent control.
 
-need_gene: array like .the gene related to this disease, some may be immune related, or others.
+need_gene: array like .The gene related to this disease, some may be immune related, or others.
 
-need_gene_dir: str default None. you can also put the need gene in to the dir in the data/
+need_gene_dir: str default None. You can also put the need gene in to the dir in the data/
 
-typ: str default rank. the model type, you can also used Adaboost, DT or else.
+typ: str default rank. The model type, you can also used Adaboost, DT or else.
 
-thre_typ: str default fdr. the method used to filter the DEG gene in the first step.
+thre_typ: str default fdr. The method used to filter the DEG gene in the first step.
 
-p_low: int default -47. used to set the lower limit, if the gene pairs don't fit your expectation, please reset it.
+p_low: int default -47. Used to set the lower limit, if the gene pairs don't fit your expectation, please reset it.
 
-p_high: int default -42. used to set the upper limit.if the gene pairs don't fit your expectation, please reset it
+p_high: int default -42. Used to set the upper limit.if the gene pairs don't fit your expectation, please reset it
 
-inter_num: int default 10. used to choose the number of p in the range between p_low and p_high.
+inter_num: int default 10. Used to choose the number of p in the range between p_low and p_high.
 
-err: int default 100. this is the difference value between your expectance of the number of selected gene pairs and the number of pairs model give under the respective p values.
+err: int default 100. This is the difference value between your expectance of the number of selected gene pairs and the number of pairs model give under the respective p values.
 
-exp: int default 500. this is the expected pair number you want to used in the following step of step forward selection. larger number will increse the complexity of model.
+exp: int default 500. This is the expected pair number you want to used in the following step of step forward selection. larger number will increse the complexity of model.
 
-plot_b: bool default. whether plotting the plot of p value selection, you can found it in dir of ./figure/Pvalue_selection.pdf.
+plot_b: bool default. Whether plotting the plot of p value selection, you can found it in dir of ./figure/Pvalue_selection.pdf.
 
 
 ##   For step_forward
-train_matrix: dataframe. should be colname=genename; rowname=sample_name.
+train_matrix: dataframe. Should be colname=genename; rowname=sample_name.
 
 label: array like.Can be DataFrame Series or array like.
 
-opt_p: float. the optimized p value you get from the function of get_opt_p.
+opt_p: float. The optimized p value you get from the function of get_opt_p.
 
-typ: str default rank. the form of gene you input as the training matrix.
+typ: str default rank. The form of gene you input as the training matrix.
 
-thre_typ: str default fdr. the method used to filter the DEG gene in the first step.
+thre_typ: str default fdr. The method used to filter the DEG gene in the first step.
 
 f_plot: bool default True. Whether plotting the processing of feature selection.
 
-f_low: int default 5. this is used to set the range of step forward selection. Actually, the more features(pairs) means more large value of AUC.
+f_low: int default 5. This is used to set the range of step forward selection. Actually, the more features(pairs) means more large value of AUC.
 
-f_high: int default 50. this is used to set the range of step forward selection. Actually, the more features(pairs)means more large value of AUC. if you want to get more accurate result regardless of the gene pairs numbers, you can set larger f_high,However, which will increase the complexity of calculating.
+f_high: int default 50. This is used to set the range of step forward selection. Actually, the more features(pairs)means more large value of AUC. if you want to get more accurate result regardless of the gene pairs numbers, you can set larger f_high,However, which will increase the complexity of calculating.
 
 
 
