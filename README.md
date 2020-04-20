@@ -51,7 +51,7 @@ thre_typ: str default fdr. The method used to filter the DEG gene in the first s
 
 p_low: int default -47. Used to set the lower limit, if the gene pairs don't fit your expectation, please reset it.
 
-p_high: int default -42. Used to set the upper limit.if the gene pairs don't fit your expectation, please reset it
+p_high: int default -42. Used to set the upper limit.if the gene pairs don't fit your expectation, please reset it.
 
 inter_num: int default 10. Used to choose the number of p in the range between p_low and p_high.
 
