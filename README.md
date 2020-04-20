@@ -3,7 +3,9 @@ This is a learning framework to extract the DEG (Differential expression genes) 
 Introduction
 -----------------------------
 Publications(please cite following paper): 
+
 Installation: 
+
 Using pip
 ```python
 pip install rankcomp
