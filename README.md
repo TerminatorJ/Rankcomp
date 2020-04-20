@@ -32,7 +32,7 @@ e.g: [(geneA,geneB),(geneC,geneD)]
 
 # Parameter list:
 
-##   For get_p:
+##   For get_p
 train_matrix: dataframe. should be set like colname=genename; rowname=sample_name.
 
 label: array like. Can be DataFrame Series or array like.
@@ -62,7 +62,7 @@ exp: int default 500. this is the expected pair number you want to used in the f
 plot_b: bool default. whether plotting the plot of p value selection, you can found it in dir of ./figure/Pvalue_selection.pdf.
 
 
-##   For step_forward.
+##   For step_forward
 train_matrix: dataframe. should be colname=genename; rowname=sample_name.
 
 label: array like.Can be DataFrame Series or array like.
