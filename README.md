@@ -1,8 +1,10 @@
 # iPAGE: individualized Pair Analysis of Gene Expression
-This is a learning framework to extract the DEG (Differential expression genes) by high fided gene pairs
 
 Introduction
 -----------------------------
+This is a learning framework to extract the DEG (Differential expression genes) by high fided gene pairs
+
+
 Publications(please cite following paper): 
 
 Installation: 
