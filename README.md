@@ -30,7 +30,7 @@ e.g: [(geneA,geneB),(geneC,geneD)]
 
 
 
-# Parameter list:
+# Parameters list:
 
 ##   For get_p
 train_matrix: dataframe. Should be set like colname=genename; rowname=sample_name.
