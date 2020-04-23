@@ -13,6 +13,8 @@ Using pip
 ```python
 pip install rankcomp
 ```
+packages requirement: 
+python3*,fisher
 
 Here is how you can extract DEG for your data:
 For user
