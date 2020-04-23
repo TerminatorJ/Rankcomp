@@ -27,7 +27,6 @@ need_gene=need_gene["Symbol"]
 ##you can use the test data saved in the ./data direction as .pickle file type
 x_test=pickle.load(open("./result/RIFpj_clst_1_test_matrix_ovlp.pickle","rb"))
 y_test=pickle.load(open("./result/RIFpj_clst_1_test_label_ovlp.pickle","rb"))
-with open("./data/RIF_gene.txt","r") as f1:
   
 ##The first step is to select the optimized p value as input for the next step.
 opt_p=get_opt_p.get_p(x_test,y_test,need_gene,inter_num=10,p_high=-2,inter_num=5)#the matrix and label should include two types of case. default 0and 1.
