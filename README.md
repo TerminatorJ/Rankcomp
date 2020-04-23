@@ -20,11 +20,17 @@ For user
 from rankcomp import get_opt_p
 from rankcomp import step_forward
 import pickle
+import pandas as pd
+
+need_gene=pd.read_table("./data/RIF_gene.txt",header=[0])
+need_gene=need_gene["Symbol"]
 ##you can use the test data saved in the ./data direction as .pickle file type
-x_test=pickle.load(open("./data/RIFpj_clst_1_test_matrix_ovlp.pickle","rb"))
-y_test=pickle.load(open("./data/RIFpj_clst_1_test_label_ovlp.pickle","rb"))
+x_test=pickle.load(open("./result/RIFpj_clst_1_test_matrix_ovlp.pickle","rb"))
+y_test=pickle.load(open("./result/RIFpj_clst_1_test_label_ovlp.pickle","rb"))
+with open("./data/RIF_gene.txt","r") as f1:
+  
 ##The first step is to select the optimized p value as input for the next step.
-opt_p=get_opt_p.get_p(x_test,y_test,need_gene,inter_num=10,p_high=-2)#the matrix and label should include two types of case. default 0and 1.
+opt_p=get_opt_p.get_p(x_test,y_test,need_gene,inter_num=10,p_high=-2,inter_num=5)#the matrix and label should include two types of case. default 0and 1.
 gene_pair=step_forward.step_forward(x_test,y_test,need_gene,opt_p)#this scripts can help you to extract different genes pairs with strong significance.
 ##If you want to customize the running process, please see the following guidline of parameter setting.
 ```
